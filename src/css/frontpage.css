@@ -1,0 +1,83 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: url("http://wallup.net/wp-content/uploads/2016/01/274430-digital_art-black_background-minimalism-abstract-symmetry-decorations-geometry-hexagon-snowflakes-imagination-face-triangle-square-circle-lines.jpg") no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.6
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 30px 30px;
+    text-decoration: none;
+    font-size: 17.65px
+}
+
+li a:hover {
+    background-color: #F0F8FF;
+}
+
+.right {
+    float: right
+}
+
+li a, .dropdown-main {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+}
+
+li a:hover, .dropping-menu:hover .dropdown-main {
+    background-color: #00FFFF;
+}
+
+li.dropping-menu {
+    display: inline-block;
+}
+
+.dropdown-items {
+  margin-left: 30px;
+    display: none;
+    position: absolute;
+    background-color: black;
+    opacity: 0.9;
+    width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-items a {
+    color: #F0F8FF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-items a:hover {
+    background-color: #00FFFF
+}
+
+.dropping-menu:hover .dropdown-items {
+    display: block;
+}

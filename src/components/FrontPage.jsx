@@ -7,7 +7,7 @@ import Structure from './Structure';
 export default class FrontPage extends React.Component{
 render() {
    return(
-     <div className = 'main'>
+     <div>
        <Structure/>
     {/*     <CommentButton/>
    <p>ToDoList</p>
