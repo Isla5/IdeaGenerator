@@ -8,13 +8,20 @@ export default class ToDoList extends Component {
             usrInp: ''
         }
     }
-
-    inpChange = (e) => {
-        const tdl = this.state.tdl.concat(ToDoList);
+    inpChange = (e, num) => {
+        const tdl = this.state.tdl;
+        tdl[num] = e.target.value
         if (this.state.usrInp.length === 0) {
+            const tdl = this.state.tdl.concat(ToDoList);
             this.setState({usrInp: e.target.value, tdl});
+        } else if (tdl[num] === '') {
+            const tdl = this.state.tdl.splice(ToDoList);
+            this.setState({usrInp: e.target.value});
+        } else {
+            this.setState({usrInp: e.target.value});
         }
     }
+
     render() {
         const tdl = this.state.tdl.map((Tdl, index) => {
             return <Tdl index={index} key={index}/>
@@ -25,7 +32,7 @@ export default class ToDoList extends Component {
             <AddFiles/>
             <p>
                 {tdl}
-                {/*  {this.state.usrInp.length} */}
+                {/* {this.state.usrInp.length} */}
             </p>
         </div>
     }
