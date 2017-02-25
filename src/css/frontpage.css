@@ -3,12 +3,20 @@ body {
     padding: 0 !important;
 }
 
+.background1 {
+    width: 100vw;
+    height: 100vh;
+    background: url("http://wallup.net/wp-content/uploads/2016/01/274430-digital_art-black_background-minimalism-abstract-symmetry-decorations-geometry-hexagon-snowflakes-imagination-face-triangle-square-circle-lines.jpg") no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.95
+}
+
 .background {
     width: 100vw;
     height: 100vh;
     background: url("http://wallup.net/wp-content/uploads/2016/01/274430-digital_art-black_background-minimalism-abstract-symmetry-decorations-geometry-hexagon-snowflakes-imagination-face-triangle-square-circle-lines.jpg") no-repeat center center fixed;
     background-size: cover;
-    opacity: 0.6
+    opacity: 0.75
 }
 
 .navbar {
