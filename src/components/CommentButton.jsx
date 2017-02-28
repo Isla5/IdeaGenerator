@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import AllComments from './AllComments';
-import CommentList from './CommentList';
 
-export default class CommentButton extends React.Component{
+export default class CommentButton extends Component{
  constructor(){
     super();
     this.state = {inputsVisible: false, buttonText: "Write Comment"};

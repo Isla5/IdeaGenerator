@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import '../css/frontpage.css';
-import {Link} from 'react-router'
+import {Link} from 'react-router';
 
 export default class Structure extends Component {
     render() {
         return (
-            <div className="background" Link to='/structure'>
+            <div className="background">
+
                 <ul className='navbar'>
                     <li className='navbar-li'>
                         <a href="#home">Home</a>
@@ -27,6 +28,7 @@ export default class Structure extends Component {
                         <a class="active" href="#about">About</a>
                     </li>
                 </ul>
+
             </div>
         );
     }

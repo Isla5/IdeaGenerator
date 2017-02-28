@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FrontPage from './components/FrontPage';
+import App from './App';
 
 ReactDOM.render(
-  <FrontPage />,
+  <App />,
   document.getElementById('root')
 );

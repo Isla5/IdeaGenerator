@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import '../css/frontpage.css'
+import '../css/frontpage.css';
+
 
 export default class ToDoList extends Component {
     constructor(props) {
