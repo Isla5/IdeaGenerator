@@ -23,7 +23,7 @@ export default class CommentForm extends Component {
 
                 {this.state.visible
                     ? <form>
-                            <h1>
+                            <h1 className='titles'>
                                 What is on your mind?
                             </h1>
                             Name:
@@ -31,7 +31,7 @@ export default class CommentForm extends Component {
                             Idea:
                             <input type="text" placeholder="Your comment here" ref="commentInputText"/>
                             <button type="button" onClick={this.handleClick}>
-                                Add Idea
+                                Add the Idea
                             </button>
                             <button type="button" onClick={this.onClick}>
                                 I have changed my mind</button>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CommentButton from './components/CommentButton';
+import CommentForm from './components/CommentButton';
 import ToDoList from './components/ToDoList';
 import './css/frontpage.css';
 import FrontPage from './components/FrontPage';
@@ -11,7 +11,7 @@ export default class App extends Component {
             <Router history={browserHistory}>
                 <Route path='/' component={FrontPage}/>
                 <Route path='/ideas' component={ToDoList}/>
-                <Route path='/home' component={CommentButton}/>
+                <Route path='/coms' component={CommentForm}/>
             </Router>
         );
     }

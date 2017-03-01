@@ -6,7 +6,6 @@ export default class Structure extends Component {
     render() {
         return (
             <div className="background">
-
                 <ul className='navbar'>
                     <li className='navbar-li'>
                         <a href="#home">Home</a>
@@ -15,13 +14,10 @@ export default class Structure extends Component {
                         <a href="#news">News</a>
                     </li>
                     <li className="dropping-menu">
-                        <a href="" className="dropdown-main">Create Ideas</a>
+                        <a href="" className="dropdown-main">GenerateIdeas</a>
                         <div className="dropdown-items">
-                            <Link to='/ideas'>create ideas</Link>
-                            <a href="">
-                                2</a>
-                            <a href="">
-                                3</a>
+                            <Link to='/ideas'>IdeaList</Link>
+                            <Link to='/coms'>IdeaComments</Link>
                         </div>
                     </li>
                     <li className='right'>

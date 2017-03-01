@@ -31,7 +31,7 @@ export default class CommentList extends Component {
         return (
             <div>
                 {allText.length > 0 && <h6>
-                    Number of Ideas: {allText.length}
+                    Number of New Ideas: {allText.length}
                 </h6>
 }
                 <h5>

@@ -9,8 +9,6 @@ export default class FrontPage extends Component {
         return (
             <div>
               <Structure />
-              <CommentButton/>
-              <ToDoList/>
             </div>
         );
     }
