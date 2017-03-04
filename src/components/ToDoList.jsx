@@ -7,7 +7,7 @@ export default class ToDoList extends Component {
         super(props);
         this.state = {
             tdl: [],
-            usrInp: ''
+            usrInp: '',
         }
     }
     inpChange = (e, num) => {
@@ -31,6 +31,7 @@ export default class ToDoList extends Component {
         return <div className='background1'>
             <input type="text" onChange={this.inpChange}/>
             <State/>
+          {/*  <A/> */}
             <p>
                 {tdl}
                 {/* {this.state.usrInp.length} */}
@@ -60,3 +61,32 @@ class State extends Component {
         );
     }
 }
+
+
+{/*} class A extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: '',
+            buttonText: ""
+        };
+    }
+
+    handleChange = (e) => {
+    this.setState({value: e.target.value,   buttonText: !this.state.buttonText})
+  }
+
+    render() {
+    let buttonText = "It's OK...keep writing";
+      if (this.state.value.length > 28) {
+          buttonText = "Maybe create a new line?"
+      }
+        return (
+          <div>
+            <input type = 'text' value = {this.state.value} onChange = {this.handleChange}/>
+            {buttonText}
+          </div>
+        );
+    }
+}
+*/}
