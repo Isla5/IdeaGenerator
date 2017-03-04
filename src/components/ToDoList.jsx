@@ -31,7 +31,6 @@ export default class ToDoList extends Component {
         return <div className='background1'>
             <input type="text" onChange={this.inpChange}/>
             <State/>
-            <AddFiles/>
             <p>
                 {tdl}
                 {/* {this.state.usrInp.length} */}
@@ -59,11 +58,5 @@ class State extends Component {
                 <option>Done</option>
             </select>
         );
-    }
-}
-
-class AddFiles extends Component {
-    render() {
-        return <div></div>
     }
 }
