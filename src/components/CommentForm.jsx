@@ -38,7 +38,7 @@ export default class CommentForm extends Component {
                         </form>
                     : null
 }
-                <div onClick={this.onClick}></div>
+
             </div>
 
         );

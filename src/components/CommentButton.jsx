@@ -29,8 +29,7 @@ export default class CommentButton extends Component {
                 <div className='comments'>
                     <Comments data={ideas} className='comments'/> {this.state.inputsVisible
                         ? <AllComments/>
-                        : null
-}
+                        : null}
                     <div onClick={this.onClick}>
                         <button>
                             {buttonText}

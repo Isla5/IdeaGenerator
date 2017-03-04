@@ -25,8 +25,8 @@ export default class ToDoList extends Component {
     }
 
     render() {
-        const tdl = this.state.tdl.map((Tdl, index) => {
-            return <Tdl index={index} key={index}/>
+        const tdl = this.state.tdl.map((Tdl) => {
+            return <Tdl/>
         });
         return <div className='background1'>
             <input type="text" onChange={this.inpChange}/>
