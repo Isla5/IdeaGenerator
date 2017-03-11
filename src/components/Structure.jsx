@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import '../css/frontpage.css';
 import {Link} from 'react-router';
 
+
+
 export default class Structure extends Component {
     render() {
         return (

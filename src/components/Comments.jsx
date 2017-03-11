@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from 'react-search';
 
 export default class Comments extends Component{
   render() {
@@ -14,7 +15,42 @@ export default class Comments extends Component{
     return (
       <div>
         {allIdeas}
+        <TestComponent/>
       </div>
     );
   }
 };
+
+class TestComponent extends Component {
+
+  HiItems(items) {
+    console.log(items)
+  }
+
+  constructor (props) {
+    super(props)
+    this.state = {
+      repos: []
+    }
+  }
+
+  render () {
+    let items = [
+      { value: 'a' },
+      { value: 'b' },
+      { value: 'c' },
+      { value: 'd' },
+      { value: 'e' },
+    ]
+
+    return (
+      <div>
+        <Search items={items}
+                placeholder='Pick your language'
+                maxSelected={6}
+                multiple={true}
+                onItemsChanged={this.HiItems.bind(this)} />
+      </div>
+    )
+  }
+}
