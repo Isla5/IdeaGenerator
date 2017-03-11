@@ -3,6 +3,21 @@ body {
     padding: 0 !important;
 }
 
+.searchinput{
+  width: 100px;
+  font-size: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  opacity: 0.6;
+  background-color: black;
+  transition: width 0.2s ease-in-out;
+}
+
+.searchinput:focus {
+  width: 300px;
+  background-color: grey
+}
+
 .background1 {
     width: 100vw;
     height: 100vh;

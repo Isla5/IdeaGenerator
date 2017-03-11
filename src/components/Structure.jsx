@@ -21,10 +21,16 @@ export default class Structure extends Component {
                         </div>
                     </li>
                     <li className='right'>
-                        <a class="active" href="#about">About</a>
+                        <li>
+                            <form className='search'>
+                                <input className='searchinput'type="text" placeholder="Search.."/>
+                            </form>
+                        </li>
+                        <li>
+                            <a class="active" href="#about">About</a>
+                        </li>
                     </li>
                 </ul>
-
             </div>
         );
     }
