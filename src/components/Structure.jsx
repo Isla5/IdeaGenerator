@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../css/frontpage.css';
+import CommentButton from './CommentButton'
 import {Link} from 'react-router';
 
 export default class Structure extends Component {
@@ -67,10 +68,11 @@ export default class Structure extends Component {
                         <p>
                             C++ lessons for <select value={this.state.value} onChange={this.handleChange}>
                                 <option>Beginners</option>
-                                <option>Level...</option>
+                             <option>Level...</option>
                             </select></p>
                     </div>
                 </div>
+                <footer><CommentButton/></footer>
             </div>
         );
     }

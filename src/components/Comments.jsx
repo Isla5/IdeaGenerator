@@ -15,40 +15,7 @@ export default class Comments extends Component{
     return (
       <div>
         {allIdeas}
-        <TestComponent />
       </div>
     );
   }
 };
-
-class TestComponent extends Component {
-
-  HiItems(items) {
-    console.log(items)
-  }
-
-  constructor (props) {
-    super(props)
-    this.state = {
-      repos: []
-    }
-  }
-
-  render () {
-    let items = [
-      {value: 'Everyone will survive!'},
-      {value: 'ALL FOR ONE!'},
-      {value: 'Death shall reign'},
-    ]
-
-    return (
-      <div>
-        <Search items={items}
-                placeholder='Pick your comment...'
-                maxSelected={1}
-                multiple={false}
-                onItemsChanged={this.HiItems.bind(this)} />
-      </div>
-    )
-  }
-}
