@@ -30,7 +30,7 @@ body {
     margin: 0 !important;
     width: 100%;
     height: 110vh;
-    background: url("http://wallup.net/wp-content/uploads/2016/01/274430-digital_art-black_background-minimalism-abstract-symmetry-decorations-geometry-hexagon-snowflakes-imagination-face-triangle-square-circle-lines.jpg") no-repeat center center fixed;
+    background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSTlS6GmK_OdkkxpcGCxZzIpIAOuZldhwtvpDdaO2vPkXmVZw5CzA") no-repeat center center fixed;
     background-size: cover;
     opacity: 1;
     color: #00FFFF;
@@ -51,14 +51,6 @@ body {
     padding: 30px;
 }
 
-li {
-    list-style-type: none;
-    padding: 10px
-}
- ul {
-   display: flex;
-   flex-direction:column;
- }
 button {
     background-color: #00FFFF;
     border: none;
@@ -98,26 +90,27 @@ input {
 
 select {
     margin-left: 10px;
-    width: 10vw;
+    width: 120px;
     height: 38px;
-    border: 2px solid #00FFFF;
+    border: 2px solid black;
     border-radius: 10px;
-    font-size: 16px;
-    background-color: #3CBC8D;
+    font-size: 19px;
+    background-color: green;
     opacity: 0.7
 }
 
 .background {
     width: 100vw;
     height: 100vh;
-    background: url("http://wallup.net/wp-content/uploads/2016/01/274430-digital_art-black_background-minimalism-abstract-symmetry-decorations-geometry-hexagon-snowflakes-imagination-face-triangle-square-circle-lines.jpg") no-repeat center center fixed;
+    background: url("http://www.planwallpaper.com/static/images/Creative-Cool-Background.jpg") no-repeat center center fixed;
     background-size: cover;
-    opacity: 0.75
+    opacity: 0.8
 }
 
 .navbar {
     list-style-type: none;
     margin: 0;
+    opacity: 0.7;
     padding: 0;
     overflow: hidden;
     background-color: black;
@@ -127,16 +120,22 @@ li {
     float: left;
 }
 
+img {
+    width: 150px;
+    heigth: 150px;
+}
+
 li a {
     display: block;
     text-align: center;
     padding: 30px 30px;
     text-decoration: none;
-    font-size: 17.65px
+    font-size: 22.65px
 }
 
 li a:hover {
     background-color: #F0F8FF;
+    color: black
 }
 
 .right {
@@ -153,6 +152,7 @@ li a, .dropdown-main {
 
 li a:hover, .dropping-menu:hover .dropdown-main {
     background-color: #00FFFF;
+    color: black
 }
 
 li.dropping-menu {
@@ -184,4 +184,39 @@ li.dropping-menu {
 
 .dropping-menu:hover .dropdown-items {
     display: block;
+}
+
+.lessons {
+    width: 300px;
+    background-color: black;
+    color: white;
+    font-size: 22.36px;
+    opacity: 0.8;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    border: 2px solid green;
+    border-radius: 25px;
+    margin-top: 169.16px;
+    margin: 40px
+}
+
+.lessonlist {
+    display: flex;
+}
+
+.headers {
+  width: 70vw;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  font-size: 39.36px;
+  opacity: 0.5;
+  text-align: center;
+  padding-bottom: 8.56px;
+  padding-top: 9.54px;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin-top: 169.16px;
+  margin: 40px
 }
