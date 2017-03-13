@@ -44,12 +44,12 @@ export default class CommentButton extends Component {
 var ideas = [
     {
         usr: 'Medivh',
-        txt: 'Everyone will survive!'
+        value: 'Everyone will survive!'
     }, {
         usr: 'Antonidas',
-        txt: 'ALL FOR ONE!'
+        value: 'ALL FOR ONE!'
     }, {
         usr: 'Sage Truthbearer',
-        txt: 'Death shall reign'
+        value: 'Death shall reign'
     }
 ];

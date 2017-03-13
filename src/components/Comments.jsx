@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import Search from 'react-search';
 
 export default class Comments extends Component{
-  HiItems(items) {
-    console.log(items)
-  }
   render() {
     var data = this.props.data;
     var allIdeas = data.map(function(idea, index) {
       return (
         <div >
           <b className='author'>{idea.usr}: </b>
-          <p>{idea.txt}</p>
+          <p>{idea.value}</p>
         </div>
       )
     })
@@ -49,7 +46,7 @@ class TestComponent extends Component {
         <Search items={items}
                 placeholder='Pick your comment...'
                 maxSelected={1}
-                multiple={true}
+                multiple={false}
                 onItemsChanged={this.HiItems.bind(this)} />
       </div>
     )
