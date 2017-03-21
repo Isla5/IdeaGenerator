@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 export default class WorkList extends Component {
     addWork = (e) => {
-        var ArrayofLines = this.props.line;
+        var ArrayofLines = this.state.line;
         ArrayofLines.push({work: this.inputRef.value});
         this.setState({line: ArrayofLines});
         this.inputRef.value = "";
@@ -30,12 +30,12 @@ class Todoline2 extends Component {
         return (
             <ul className="theList">
                 {todoEntries.map((item, i) => {
-                    return <li key={i}>
+                    return <ul key={i}>
                         ....................................................
                         <li>Title:  {item.name}</li>
                         <li>Key: {item.key}</li>
                         <li>Worklist:{item.work}</li>
-                    </li>
+                    </ul>
                 })}
             </ul>
         )

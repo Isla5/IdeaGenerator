@@ -1,13 +1,6 @@
 import React, {Component} from 'react';
 
 export default class Todo extends Component {
-    addItem = (e) => {
-        var ArrayofLines = this.props.line;
-        ArrayofLines.push({name: this.todoInpText.value});
-        this.setState({line: ArrayofLines});
-        this.todoInpText.value = "";
-        e.preventDefault();
-    }
     render() {
         return (
             <div>
@@ -26,19 +19,21 @@ export default class Todo extends Component {
 };
 
 class Todoline extends Component {
-  render() {
-      var todoEntries = this.props.entries;
-      return (
-          <ul className="theList">
-              {todoEntries.map((item, i) => {
-                  return <li key={i}>
-                      ....................................................
-                      <li>Title: {item.name}</li>
-                      <li>Key: {item.key}</li>
-                      <li>Worklist:{item.work}</li>
-                  </li>
-              })}
-          </ul>
-      )
-  }
+    onItemClick = (item) => {
+        alert('df')
+    }
+    render() {
+        var todoEntries = this.props.entries;
+        return (
+            <ul className="theList">
+                {todoEntries.map((item, i) => {
+                    return <ul key={i}>
+                        ....................................................
+                        <li onClick={this.props.onItemClick}>Title: {item.name}</li>
+                        <li>Worklist:{item.work}</li>
+                    </ul>
+                })}
+            </ul>
+        )
+    }
 };
