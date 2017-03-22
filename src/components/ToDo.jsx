@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export default class Todo extends Component {
     addWork = (e) => {
         e.preventDefault();
-        this.props.onRowAdd({name: this.inputRef.value, work: []});
+        this.props.onRowAdd({name: this.inputRef.value, work: {wname:['fooo']} });
         this.inputRef.value = "";
     }
 
@@ -23,7 +23,7 @@ export default class Todo extends Component {
                                     <div>
                                         Title:{item.name}</div>
                                     <div>
-                                        Worklist:{item.work}</div >
+                                        Worklist:{item.work[0].wname}</div>
                                 </li>
                             );
 
