@@ -21,9 +21,9 @@ export default class Todo extends Component {
                             return (
                                 <li key={i} onClick= {() => this.props.onTodoRowClick(i)}>
                                     <div>
-                                        Title: {item.name}</div>
+                                        Title:{item.name}</div>
                                     <div>
-                                        Worklist : {item.work}</div >
+                                        Worklist:{item.work}</div >
                                 </li>
                             );
 

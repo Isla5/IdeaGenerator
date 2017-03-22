@@ -9,16 +9,27 @@ export default class Main extends Component {
             todos: [
                 {
                     name: 'Work',
-                    work: ['do coding']
+                    work:['coding', 'coffffeeeeeee', 'whatever']
                 }, {
                     name: 'Private',
-                    work: ['do coding again', 'whatever, coding']
+                    work: ['buy coffee', 'make coffee', 'drink coffee', 'shoooooppppping']
                 }
             ],
-            selectedIndex: 0
+            selectedIndex: 0,
+            checked: true
         };
     }
 
+    onClickk = () => {
+        console.log(this.state.checked)
+    }
+
+    onClick = () => {
+        console.log(this.state.checked);
+        this.setState({
+            checked: !this.state.checked
+        });
+    }
     onRowSelect = (selectedIndex) => {
         this.setState({selectedIndex});
     };
@@ -38,8 +49,9 @@ export default class Main extends Component {
     render() {
         return (
             <div>
-                <Todo todos={this.state.todos} onTodoRowClick={this.onRowSelect} onRowAdd={this.onRowAdd}/>
-                <WorkList works={this.state.todos[this.state.selectedIndex].work} onWorkAdd={this.onWorkAdd}/>
+                <Todo todos={this.state.todos} onTodoRowClick={this.onRowSelect} onRowAdd={this.onRowAdd} onClickk={this.onClickk}/>
+                <WorkList works={this.state.todos[this.state.selectedIndex].work} onClick={this.onClick} onClickk={this.onClickk}
+                  onWorkAdd={this.onWorkAdd}/>
             </div>
         );
     }
