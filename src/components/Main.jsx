@@ -3,23 +3,22 @@ import Todo from './ToDo.jsx';
 import WorkList from './WorkList.jsx';
 
 export default class Main extends Component {
-  constructor() {
-      super();
-      this.state = {
-          todos: [
-              {
-                  name: 'Work',
-                  work:[{wname:['coding', 'coffffeeeeeee', 'whatever']}]
-              }, {
-                  name: 'Private',
-                  work: [{wname: ['buy coffee', 'make coffee', 'drink coffee', 'shoooooppppping']}]
-              }
-          ],
-          selectedIndex: 0,
-          checked: true
-      };
-  }
-
+    constructor() {
+        super();
+        this.state = {
+            todos: [
+                {
+                    name: 'Work',
+                    work: ['coding', 'coffffeeeeeee', 'whatever']
+                }, {
+                    name: 'Private',
+                    work: ['buy coffee', 'make coffee', 'drink coffee', 'shoooooppppping']
+                }
+            ],
+            selectedIndex: 0,
+            checked: true
+        };
+    }
 
     onClickk = () => {
         console.log(this.state.checked)
@@ -43,7 +42,7 @@ export default class Main extends Component {
 
     onWorkAdd = (newWork) => {
         const {todos} = this.state;
-        todos[this.state.selectedIndex].work[0].wname.push(newWork);
+        todos[this.state.selectedIndex].work.push(newWork);
         this.setState({todos});
     };
 
@@ -51,8 +50,7 @@ export default class Main extends Component {
         return (
             <div>
                 <Todo todos={this.state.todos} onTodoRowClick={this.onRowSelect} onRowAdd={this.onRowAdd} onClickk={this.onClickk}/>
-                <WorkList works={this.state.todos[this.state.selectedIndex].work[0].wname} onClick={this.onClick} onClickk={this.onClickk}
-                  onWorkAdd={this.onWorkAdd}/>
+                <WorkList works={this.state.todos[this.state.selectedIndex].work} onClick={this.onClick} onClickk={this.onClickk} onWorkAdd={this.onWorkAdd}/>
             </div>
         );
     }
