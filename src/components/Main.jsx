@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Todo from './ToDo.jsx';
 import WorkList from './WorkList.jsx';
+import FilteredList from './SearchBar.jsx'
 
 export default class Main extends Component {
     constructor() {
@@ -9,27 +10,49 @@ export default class Main extends Component {
             todos: [
                 {
                     name: 'Work',
-                    work: ['coding', 'coffffeeeeeee', 'whatever']
+                    work: ['coding']
                 }, {
                     name: 'Private',
-                    work: ['buy coffee', 'make coffee', 'drink coffee', 'shoooooppppping']
+                    work: ['coffeeeee']
+                }, {
+                    name: 'Pets',
+                    work: ['dog']
+                }
+            ],
+            todos2: [
+                {
+                    name: 'Work',
+                    work: ['coding']
+                }, {
+                    name: 'Private',
+                    work: ['coffeeeee']
+                }, {
+                    name: 'Pets',
+                    work: ['dog']
                 }
             ],
             selectedIndex: 0,
-            checked: true
+            search: '',
+            filtered: []
         };
     }
 
-    onClickk = () => {
-        console.log(this.state.checked)
+    filterList = ({target}) => {
+        var updatedList = this.state.todos;
+        updatedList = updatedList.filter((item) => {
+            return item.name.toLowerCase().search(target.value.toLowerCase()) !== -1;
+        });
+        if (updatedList.length === 0) {
+          this.setState({todos: this.state.todos2, filtered: updatedList})
+        } else {
+            this.setState({filtered: updatedList, todos: updatedList}) }
+        console.log(updatedList.length, this.state.todos, target.value.length)
     }
 
-    onClick = () => {
-        console.log(this.state.checked);
-        this.setState({
-            checked: !this.state.checked
-        });
+    componentWillMount = () => {
+        this.setState({filtered: this.state.todos})
     }
+
     onRowSelect = (selectedIndex) => {
         this.setState({selectedIndex});
     };
@@ -38,7 +61,7 @@ export default class Main extends Component {
         const {todos} = this.state;
         todos.push(newRow);
         this.setState({todos});
-    }
+    };
 
     onWorkAdd = (newWork) => {
         const {todos} = this.state;
@@ -49,8 +72,9 @@ export default class Main extends Component {
     render() {
         return (
             <div>
-                <Todo todos={this.state.todos} onTodoRowClick={this.onRowSelect} onRowAdd={this.onRowAdd} onClickk={this.onClickk}/>
-                <WorkList works={this.state.todos[this.state.selectedIndex].work} onClick={this.onClick} onClickk={this.onClickk} onWorkAdd={this.onWorkAdd}/>
+                <FilteredList todos2={this.state.todos2} todos={this.state.todos} filtered={this.state.filtered} filterList={this.filterList}/>
+                <Todo todos={this.state.todos} onTodoRowClick={this.onRowSelect} onRowAdd={this.onRowAdd}/>
+                <WorkList works={this.state.todos[this.state.selectedIndex].work} onWorkAdd={this.onWorkAdd}/>
             </div>
         );
     }

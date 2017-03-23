@@ -14,13 +14,13 @@ export default class WorkList extends Component {
             <div>
                 <div>
                     <form onSubmit={this.addWork}>
-                        <input ref= {(a) => this.inputRef = a} required/>
+                        <input ref={(a) => this.inputRef = a} required/>
                         <input type="submit" value='+'></input>
                     </form>
                 </div>
                 <ul className="theList">
                     {this.props.works.map((item, i) => <li key={i} onClick={this.props.onClickk}>{item}
-                        <input type="checkbox" checked={this.props.checked} onClick={this.props.onClickk} onClick={this.props.onClick}/>
+                        <input type="checkbox" checked={this.props.checked} onClick={this.props.onClick}/>
                     </li>)}
                 </ul>
             </div>
